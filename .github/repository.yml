@@ -1,10 +1,10 @@
 name: SpaceMouse3Dconnexion
 description: The SpaceMouse3Dconnexion QGIS Plugin enables professional-grade 3D navigation in QGIS using 3DConnexion SpaceMouse devices
 topics:
-  - QGIS
-  - SpaceMouse
-  - 3Dconnexion
+  - qgis
+  - spacemouse
+  - 3dconnexion
   - 3d navigation
-  - Qgis Plugin
-  - 3DMouse
+  - qgis plugin
+  - 3dmouse
   - python
