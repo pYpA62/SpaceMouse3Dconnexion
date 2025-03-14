@@ -126,3 +126,5 @@ Linux and macOS Support: The plugin is currently tested only on Windows. Support
 
 Future Testing: If you plan to test and support other platforms, update the documentation accordingly.
 
+## Keywords
+QGIS, SpaceMouse, 3Dconnexion, QGIS Plugin, HID Input, 3D Navigation, Python, 3DMouse, QGIS 3D
