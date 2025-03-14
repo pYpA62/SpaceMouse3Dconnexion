@@ -1,0 +1,6 @@
+# Core dependencies
+numpy>=1.20.0
+pyspacemouse>=0.3.0
+easyhid>=0.0.9
+PyQt5>=5.15.0
+
