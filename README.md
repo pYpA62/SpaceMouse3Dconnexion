@@ -39,7 +39,9 @@ This plugin temporarily stops the 3DConnexion service while running to avoid con
 - Python packages (automatically installed):
   * numpy >= 1.20.0
   * easyhid >= 0.0.9 (for device detection)
-  
+  * pywinusb (for HID communication on Windows)
+
+ 
 ### Platform
 - Tested on Windows only
 - Linux and macOS support is in development
