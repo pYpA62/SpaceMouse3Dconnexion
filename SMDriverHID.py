@@ -15,6 +15,7 @@ from typing import Callable, Union, List, Optional, Dict, Any, Tuple
 # Importer les fonctions pour charger les périphériques
 from .SMNewDevice import load_devices_from_config
 
+from qgis.core import QgsMessageLog, Qgis
 # Configuration du logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("SMDriverHID")
@@ -499,6 +500,7 @@ def close():
         _connected = False
         _active_device = None
 
+ 
 def read():
     """Lit les données du périphérique SpaceMouse"""
     global _device, _connected, _last_state, _data_buffer, _device_info
@@ -525,9 +527,16 @@ def read():
                         # Appliquer l'échelle (comme dans pyspacemouse)
                         value = scale * raw_value / float(_device_info["axis_scale"])
                         
+                        """# Afficher les valeurs brutes et mises à l'échelle
+                        QgsMessageLog.logMessage(
+                            f"Axis {axis_name}: Raw value (converted) = {raw_value}, Scaled value = {value}",
+                            "SpaceMouse",
+                            Qgis.Info
+                        )"""
+                       
                         # Mettre à jour l'état
                         _last_state = _last_state._replace(**{axis_name: value})
-                
+                        
                 # Traiter les boutons
                 for button_index, (chan, byte, bit) in enumerate(_device_info["button_mapping"]):
                     if channel == chan and byte < len(data):
@@ -549,6 +558,13 @@ def read():
                 # Traiter les axes
                 for axis_name, (chan, b1, b2, scale) in _device_info["mappings"].items():
                     if channel == chan and b1 < len(data) and b2 < len(data):
+                        """# Afficher les valeurs brutes converties sur une seule ligne
+                        QgsMessageLog.logMessage(
+                            f"Axis {axis_name}: Raw value (converted) = {_to_int16(data[b1], data[b2])}",
+                            "SpaceMouse",
+                            Qgis.Info
+                        )"""
+                        
                         # Lire les valeurs brutes
                         raw_value = _to_int16(data[b1], data[b2])
                         
@@ -557,7 +573,7 @@ def read():
                         
                         # Mettre à jour l'état
                         _last_state = _last_state._replace(**{axis_name: value})
-                
+                        
                 # Traiter les boutons
                 for button_index, (chan, byte, bit) in enumerate(_device_info["button_mapping"]):
                     if channel == chan and byte < len(data):
@@ -572,7 +588,7 @@ def read():
     except Exception as e:
         logger.error(f"Error reading from device: {e}")
         return None
-
+    
 class DeviceWrapper:
     """Classe wrapper pour la compatibilité avec l'API pyspacemouse"""
     

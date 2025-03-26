@@ -1207,15 +1207,44 @@ class SpaceMousePlugin(QObject):
             device_id: Unique identifier for the device
             button_index: Index of the button that was pressed
         """
+        # Log plus détaillé pour le débogage
         self._log_message(f"Button {button_index} pressed on device {device_id}", Qgis.Info)
         
-        # Right button (usually index 1) resets to top view
-        if button_index == 1:  # Right button
-            self._reset_to_top_view()
+        # Ajouter un message dans l'interface QGIS pour une visibilité immédiate
+        #if hasattr(self, 'iface') and self.iface:
+        #    self.iface.messageBar().pushMessage(
+        #        "SpaceMouse", 
+        #        f"Button {button_index} pressed", 
+        #        Qgis.Info, 
+        #        3
+        #    )
         
-        # Left button (usually index 0) sets isometric view
-        elif button_index == 0:  # Left button
+        # Vérifier tous les boutons possibles (0 à 5 pour couvrir la plupart des modèles)
+        if button_index == 0:  # Généralement bouton gauche
+            self._log_message("Activating isometric view (Button 0)", Qgis.Info)
             self._set_isometric_view()
+        elif button_index == 1:  # Généralement bouton droit
+            self._log_message("Activating top view (Button 1)", Qgis.Info)
+            self._reset_to_top_view()
+        # Ajouter des conditions pour d'autres boutons si votre SpaceMouse en a plus
+        elif button_index == 2:
+            self._log_message("Button 2 pressed - no action assigned", Qgis.Info)
+        elif button_index == 3:
+            self._log_message("Button 3 pressed - no action assigned", Qgis.Info)
+        else:
+            self._log_message(f"Unhandled button index: {button_index}", Qgis.Info)
+            
+        # Vous pouvez également essayer de forcer l'exécution des deux fonctions
+        # pour voir si l'une ou l'autre fonctionne
+        if button_index in [0, 1]:
+            # Si c'est l'un des deux boutons principaux, essayez de vérifier
+            # si la fonction _reset_to_top_view() est appelée correctement
+            try:
+                if button_index == 1:
+                    # Vérifier si la fonction est bien appelée
+                    self._log_message("Debug: Explicitly calling _reset_to_top_view()", Qgis.Info)
+            except Exception as e:
+                self._log_message(f"Error in button handler: {str(e)}", Qgis.Critical)
 
     def _reset_to_top_view(self) -> None:
         """Reset the camera to top view using both resetView and setViewFromTop."""
