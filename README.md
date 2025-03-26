@@ -116,9 +116,6 @@ ex : Devices.json
 	- Verify that the plugin is enabled in QGIS
 	- Check the QGIS log for error messages
 
-## Contact
-For any issues or questions, please contact the author at denis.empisse@hotmail.com.
-
 ## Additional Notes
 Linux and macOS Support: The plugin is currently tested primarily on Windows. 
 Support for Linux and macOS is in development.
