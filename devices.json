@@ -14,7 +14,7 @@
       [3, 1, 0],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceNavigator For Notebooks": {
     "name": "SpaceNavigator For Notebooks",
@@ -31,7 +31,7 @@
       [3, 1, 0],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceMouse Compact": {
     "name": "SpaceMouse Compact",
@@ -48,7 +48,7 @@
       [3, 1, 0],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceMouse Pro": {
     "name": "SpaceMouse Pro",
@@ -78,7 +78,7 @@
       [3, 1, 4],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceMouse Pro Wireless": {
     "name": "SpaceMouse Pro Wireless",
@@ -108,7 +108,7 @@
       [3, 1, 4],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceMouse Wireless": {
     "name": "SpaceMouse Wireless",
@@ -125,7 +125,7 @@
       [3, 1, 0],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceMouse Wireless [NEW]": {
     "name": "SpaceMouse Wireless [NEW]",
@@ -142,7 +142,7 @@
       [3, 1, 0],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "3Dconnexion Universal Receiver": {
     "name": "3Dconnexion Universal Receiver",
@@ -172,7 +172,7 @@
       [3, 1, 4],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpacePilot": {
     "name": "SpacePilot",
@@ -208,7 +208,7 @@
       [3, 3, 3],
       [3, 3, 4]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpacePilot Pro": {
     "name": "SpacePilot Pro",
@@ -244,7 +244,7 @@
       [3, 2, 2],
       [3, 1, 1]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceExplorer": {
     "name": "SpaceExplorer",
@@ -274,7 +274,7 @@
       [3, 2, 6],
       [3, 1, 4]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceMouse Enterprise": {
     "name": "SpaceMouse Enterprise",
@@ -311,7 +311,7 @@
       [3, 4, 1],
       [3, 4, 2]
     ],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   },
   "SpaceMouse USB": {
     "name": "SpaceMouseUSB",
@@ -325,6 +325,6 @@
       "yaw": [2, 5, 6, 1]
     },
     "button_mapping": [],
-    "axis_scale": 327.0
+    "axis_scale": 350.0
   }
 }
