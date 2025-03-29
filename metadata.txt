@@ -14,7 +14,7 @@ about=This plugin enables direct HID communication with 3DConnexion SpaceMouse d
 version=1.0.0
 author=pYpA62
 email=denis.empisse@hotmail.com
-repository=https://github.com/pYpA62/SpaceMouse3Dconnexion
+repository=https://github.com/pYpA62/SpaceMouse3Dconnexion-Plugin-QGIS
 
 changelog=Version 1.0.0 (2025-03-10)
     * Initial release
@@ -23,8 +23,8 @@ changelog=Version 1.0.0 (2025-03-10)
     * Smooth navigation control
 
 tags=3d,navigation,spacemouse,3dconnexion,3d mouse,6dof,qgis,python,plugin
-homepage=
-tracker=
+homepage=https://github.com/pYpA62/SpaceMouse3Dconnexion-Plugin-QGIS
+tracker=https://github.com/pYpA62/SpaceMouse3Dconnexion-Plugin-QGIS/issues
 icon=icons/SpaceMouse_icon.png
 category=3D_View,
 experimental=False
